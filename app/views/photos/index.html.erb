@@ -6,4 +6,5 @@
   <p> <%= photo.title %> </p>
   <p> <%= photo.description %> </p>
   <%= image_tag photo.url %>
+  <p> Comments: <%= photo.comments.count %> </p>
 <% end %>

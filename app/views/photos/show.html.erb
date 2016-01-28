@@ -3,3 +3,9 @@
 <p> <%= @photo.description %> </p>
 <%= image_tag @photo.url %>
 
+<h2> Comments </h2>
+<% @comments.each do |comment| %>
+<p><%= comment.name %></p>
+<p><%= comment.message %></p>
+<p><%= comment.created_at %></p>
+<% end %>
