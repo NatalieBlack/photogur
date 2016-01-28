@@ -1,0 +1,5 @@
+<p> <%= link_to 'Edit', edit_photo_path(@photo) %> <%= link_to 'Delete', photo_path(@photo), method: :delete, data: {confirm: "Are you sure?" } %> </p>
+<p> <%= @photo.title %> </p>
+<p> <%= @photo.description %> </p>
+<%= image_tag @photo.url %>
+

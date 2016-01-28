@@ -1,0 +1,9 @@
+<h1>Photos</h1>
+<%= link_to "Add new photo", new_photo_path %>
+
+<% @photos.each do |photo| %>
+  <p> <%= link_to 'View', photo_path(photo) %> <%= link_to 'Edit', edit_photo_path(photo) %> <%= link_to 'Delete', photo_path(photo), method: :delete, data: {confirm: "Are you sure?" } %> </p>
+  <p> <%= photo.title %> </p>
+  <p> <%= photo.description %> </p>
+  <%= image_tag photo.url %>
+<% end %>
